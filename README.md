@@ -1,2 +1,2 @@
 # Student-Progress-Card-App
-This is Android application which helps students to acces their marks on daily basis of mid terms and semester end examination. It uses gmail api for forgot password and also uses graph api to visualize your progress on graph.
+This is an Android application which helps students access their marks of Mid-Terms and Semester End Examinations in real time. It uses Gmail API & Graph API among various other tools for basic functionalities.
