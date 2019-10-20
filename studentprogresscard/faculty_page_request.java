@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class faculty_page_request extends StringRequest {
     //static String url = "http://justmakeitfast.esy.es/justmakeit/register.php";
-    static String url = "https://15bit064.000webhostapp.com/shrey/logindata.php";
+    static String url = "https://15bit049.000webhostapp.com/shrey/logindata.php";
 
     private Map<String, String> params;
 
@@ -23,6 +23,10 @@ public class faculty_page_request extends StringRequest {
 
        // params.put("keyonandroidemail",email);
         //params.put("keyonandroidpassword", pswd);
+        params.put("keyonandroidrollno",rollno);
+        params = new HashMap<>();
+        params.put("keyonandroidemail",email);
+        params.put("keyonandroidpassword", pswd);
         params.put("keyonandroidrollno",rollno);
     }
 
