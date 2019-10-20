@@ -78,7 +78,7 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
                 new javax.mail.Authenticator() {
                     //Authenticating the password
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("15bit064@nirmauni.ac.in", "SoftwareEng1");
+                        return new PasswordAuthentication("15bit064@nirmauni.ac.in", "");
                     }
                 });
 
@@ -94,6 +94,10 @@ public class SendMail extends AsyncTask<Void,Void,Void> {
             mm.setSubject(subject);
             //Adding message
             mm.setText(message);
+            props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.port", "465");
+            mm.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
 
             //Sending email
             Transport.send(mm);
