@@ -37,7 +37,34 @@ String rollno;
         String ia_marks=(ia_marks_field.getText().toString());
         EditText see_marks_field= (EditText) findViewById(R.id.see_marks);
         String see_marks=(see_marks_field.getText().toString());
-
+        try{
+    		int t = Integer.parseInt(r.readLine());
+    		for(int tI = 0;tI<t;tI++){
+    			String[] s= r.readLine().split(" ");
+                int[] arr= new int[s.length];
+                for(int i=0;i<s.length;i++){
+                    arr[i]=Integer.parseInt(s[i]);
+                }
+                int a = arr[0];
+                int b = arr[1];
+                int n = arr[2];
+                
+                int result = 0;
+                
+                while(a<=n && b<=n){
+                    if(a>b){
+                       b+=a; 
+                    }else{
+                        a+=b;
+                    }
+                    result+=1;
+                    //System.out.println(a+" "+b);
+                }
+                System.out.println(result);
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }
 
         Response.Listener<String> responseonmarks=new Response.Listener<String>() {
             @Override
